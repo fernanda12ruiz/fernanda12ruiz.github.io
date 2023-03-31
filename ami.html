@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            @font-face {
+                font-family: 'AmiCourierVF';
+                src: url('AmiCourierVF.woff2') format('woff2');
+            }
+        
+            html, body {
+                padding: 50px;
+                font-family: 'AmiCourierVF';
+                font-size: 15px;
+                line-height: 20px;
+                text-align: center;
+            }
+        
+            .pressure {
+                max-width: 60%;
+                font-size: 24px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+        
+            .pressure span {
+                margin: -9px 0 !important;
+                line-height: 1.15;
+                width: 20px;
+                display: block !important;
+                width: 12px;
+                height: 45px;
+            }
+
+            p {
+                display: inline;
+                margin: 0;
+                letter-spacing: -20px;
+                font-size: 100px;
+                animation-duration: 2s;
+                animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+                animation-iteration-count: infinite;
+                animation-fill-mode: both;
+                animation-direction: alternate;
+            }
+
+            .n1 {
+                animation-name: n1;
+                font-variation-settings: 'prss' 50;
+            }
+
+            .n2 {
+                animation-name: n2;
+                font-variation-settings: 'prss' 150;
+            }
+
+            .n3 {
+                animation-name: n3;
+                font-variation-settings: 'prss' 0;
+            }
+
+            .n4 {
+                animation-name: n4;
+                font-variation-settings: 'prss' 200;
+            }
+
+            .n5 {
+                animation-name: n5;
+                font-variation-settings: 'prss' 120;
+            }
+
+            .n6 {
+                animation-name: n6;
+                font-variation-settings: 'prss' 0;
+            }
+
+            .n7 {
+                animation-name: n7;
+                font-variation-settings: 'prss' 200;
+            }
+
+            .n8 {
+                animation-name: n8;
+                font-variation-settings: 'prss' 75;
+            }
+
+            .n9 {
+                animation-name: n9;
+                font-variation-settings: 'prss' 10;
+            }
+
+            .n0 {
+                animation-name: n0;
+                font-variation-settings: 'prss' 180;
+            }
+
+            @keyframes n1 {
+                0% { font-variation-settings: 'prss' 50; }
+                100% { font-variation-settings: 'prss' 150; }
+            }
+
+            @keyframes n2 {
+                0% { font-variation-settings: 'prss' 150; }
+                100% { font-variation-settings: 'prss' 10; }
+            }
+
+            @keyframes n3 {
+                0% { font-variation-settings: 'prss' 0; }
+                100% { font-variation-settings: 'prss' 200; }
+            }
+
+            @keyframes n4 {
+                0% { font-variation-settings: 'prss' 200; }
+                100% { font-variation-settings: 'prss' 50; }
+            }
+
+            @keyframes n5 {
+                0% { font-variation-settings: 'prss' 120; }
+                100% { font-variation-settings: 'prss' 12; }
+            }
+
+            @keyframes n6 {
+                0% { font-variation-settings: 'prss' 0; }
+                100% { font-variation-settings: 'prss' 50; }
+            }
+
+            @keyframes n7 {
+                0% { font-variation-settings: 'prss' 200; }
+                100% { font-variation-settings: 'prss' 0; }
+            }
+
+            @keyframes n8 {
+                0% { font-variation-settings: 'prss' 75; }
+                100% { font-variation-settings: 'prss' 150; }
+            }
+
+            @keyframes n9 {
+                0% { font-variation-settings: 'prss' 10; }
+                100% { font-variation-settings: 'prss' 40; }
+            }
+
+            @keyframes n0 {
+                0% { font-variation-settings: 'prss' 180; }
+                100% { font-variation-settings: 'prss' 18; }
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- <p class="pressure">
+            Né en 1980, Alexandre Mattiussi a étudié à l'école Duperré.
+            <br/><br/>
+            Après des expériences formatrices au sein de plusieurs maisons de mode - l'amenant à voyager entre Paris, Milan et New York, le créateur a décidé en 2011 de lancer sa propre marque : AMI.
+        
+            Fondé·e à Paris et inspirée par la ville depuis, AMI propose une garde-robe élégante et complète pour l'homme et la femme. Son nom joue avec les initiales d'Alexandre Mattiussi.
+        
+            Par son approche authentique et conviviale, la maison capture l'essence particulière d'une nonchalance Parisienne qui brouille les frontières entre chic et décontracté.
+        </p> -->
+
+        <p class="n1">1</p>
+        <p class="n2">2</p>
+        <p class="n3">3</p>
+        <p class="n4">4</p>
+        <p class="n5">5</p>
+        <p class="n6">6</p>
+        <p class="n7">7</p>
+        <p class="n8">8</p>
+        <p class="n9">9</p>
+        <p class="n0">0</p>
+
+        <!-- <script>
+            const pressure = document.querySelector('.pressure');
+            const txt = pressure.innerText;
+            console.warn(txt);
+            let txtInnerHtml = '';
+            const minWght = 0;
+            const maxWght = 200;
+            const minAlpha = 0.85;
+            const maxAlpha = 1;
+            const minRotate = -2;
+            const maxRotate = 2;
+            for (var i=0; i<txt.length; i++) {
+                const letter = txt.charAt(i);
+                const wght = minWght + Math.random()*(maxWght - minWght);
+                const alpha = minAlpha + Math.random()*(maxAlpha - minAlpha);
+                const rotate = minRotate + Math.random()*(maxRotate - minRotate);
+                txtInnerHtml += `<span style="display: inline; transform: rotate(${rotate}deg); opacity : ${alpha}; font-variation-settings: 'prss' ${wght}">${letter}</span>`;
+            }
+            pressure.innerHTML = txtInnerHtml; -->
+        </script>
+    </body>
+</html>
