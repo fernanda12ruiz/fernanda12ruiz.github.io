@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="image-container">
+      <img class="image" src="img/01.jpg" />
+      <img class="image" src="img/02.jpg" />
+      <img class="image" src="img/03.jpg" />
+      <img class="image" src="img/04.jpg" />
+      <img class="image" src="img/05.jpg" />
+      <img class="image" src="img/06.jpg" />
+    </div>
+    
+    <script src="" async defer></script>
+    <script>
+      const images = document.querySelectorAll('.image');
+const container = document.querySelector('#image-container');
+
+let containerTop = container.getBoundingClientRect().top;
+let lastScrollY = window.scrollY;
+let ticking = false;
+
+function updateImages() {
+  const screenHeight = window.innerHeight;
+  const screenWidth = window.innerWidth;
+  const maxImages = 3;
+  const sides = ['top', 'right', 'bottom', 'left'];
+
+  images.forEach((image, i) => {
+    const side = sides[Math.floor(Math.random() * sides.length)];
+    let x, y;
+
+    switch (side) {
+      case 'top':
+        x = Math.random() * (screenWidth - image.clientWidth);
+        y = -image.clientHeight;
+        break;
+      case 'right':
+        x = window.innerWidth + image.clientWidth;
+        y = Math.random() * (screenHeight - image.clientHeight);
+        break;
+      case 'bottom':
+        x = Math.random() * (screenWidth - image.clientWidth);
+        y = window.innerHeight + image.clientHeight;
+        break;
+      case 'left':
+        x = -image.clientWidth;
+        y = Math.random() * (screenHeight - image.clientHeight);
+        break;
+    }
+
+    if (i < maxImages && image.getBoundingClientRect().bottom >= containerTop && image.getBoundingClientRect().top <= containerTop + screenHeight) {
+      image.style.transform = `translate(${(screenWidth - image.clientWidth) / 2 - x}px, ${(screenHeight - image.clientHeight) / 2 - y}px)`;
+    } else {
+      image.style.transform = 'translate(0, 0)';
+    }
+  });
+
+  containerTop = container.getBoundingClientRect().top;
+  ticking = false;
+}
+
+function updateScroll() {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      if (lastScrollY !== window.scrollY) {
+        updateImages();
+        lastScrollY = window.scrollY;
+      }
+    });
+
+    ticking = true;
+  }
+}
+
+window.addEventListener('scroll', updateScroll);
+
+    </script>
+  </body>
+</html>
